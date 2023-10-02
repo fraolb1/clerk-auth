@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { auth } from "@clerk/nextjs";
+import { UserButton, auth } from "@clerk/nextjs";
+import { useId } from "react";
 const Header = () => {
   const { userId } = auth();
-  console.log(userId);
   return (
     <>
       <nav className=' bg-blue-700 py-4 flex justify-between items-center px-10 mb-5'>
@@ -23,6 +23,14 @@ const Header = () => {
               <Link href='sign-up'>Sign Up</Link>
             </div>
           </div>
+        )}
+        {userId && (
+          <>
+            <Link href='profile' className=' text-gray-300 hover:text-white'>
+              Profile
+            </Link>
+            <UserButton />
+          </>
         )}
       </nav>
     </>
