@@ -16,11 +16,11 @@ const Header = () => {
         {!userId && (
           <div className='flex space-x-5'>
             <div className=' text-gray-300 hover:text-white mr-4 '>
-              <Link href='sign-in'>Sign In</Link>
+              <Link href='login'>Sign In</Link>
             </div>
 
             <div className=' text-gray-300 hover:text-white  mr-4'>
-              <Link href='sign-up'>Sign Up</Link>
+              <Link href='register'>Sign Up</Link>
             </div>
           </div>
         )}
